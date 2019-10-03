@@ -1,0 +1,45 @@
+{% load staticfiles %}
+{% load static %}
+<html>
+<head>
+	<title>Services</title>
+	<link rel="stylesheet" href="{%static 'css/service.css' %}">
+</head>
+<body>
+
+	<div class="header">
+		<div class="container">
+
+			<div class="logo">
+				<p>View</p>
+			</div>
+
+			<nav>
+				<ul>
+					<li><a href="{% url 'Transporterhome' %}">Home</a></li>
+					<li><a href="{% url 'Add' %}">Add</a></li>
+					<li><a href="{% url 'View' %}">View</a></li>
+					<li><a href="{% url 'base' %}">Logout</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+
+	<div class="services">
+		<div class="show-transports">
+			<div class="box">
+				<img src="bharat.jpg">
+			</div>
+			<div class="transport-info">
+				<h2>BHARATBENZ 3123R</h2>
+				<p>Transporter: </p>
+				<p>Size :</p>
+				<p>Model :</p>
+				<input type="submit" id="more-info" value="More Info">
+				<input type="submit" id="more-info" value="Update">
+				<input type="submit" id="delete" value="Delete">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

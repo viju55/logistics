@@ -1,0 +1,30 @@
+{% load static %}
+{% load staticfiles %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Booking</title>
+<link rel="stylesheet" href="{% static 'css/bookstyle.css' %}">
+</head>
+<body>
+
+<div class="container">
+<div style ="background-color: blue;text-align:center; color: white; font-size:30px" class=""col-md-7">
+    <b>Booking form</b>
+</div>
+<div style="margin-top:20px;width:100%;background-image: url('{% static "images\login6.png" %}')";"class="col-md-7">
+<div class="container">
+   <form method="post" action="">
+       <div class="container">
+        <div class="box">
+      {%csrf_token%}
+      {{form.as_p}}
+
+      <button class="" type="submit" style="background-color:#F4EB16; color:blue">submit</button>
+    </div>
+    </div>
+    </form>
+</div>
+
+</body>
+</html>

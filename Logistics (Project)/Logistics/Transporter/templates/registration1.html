@@ -1,0 +1,70 @@
+{% load static %}
+{% load staticfiles %}
+
+<html>
+<head>
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+<div class="container">
+<div style ="background-color: black;text-align:center; color: white; font-size:30px" class=""col-md-7">
+    <b>Transporter registration form</b>
+</div>
+<!--<h1>User registration form</h1>-->
+<div style="margin-top:20px;width:100%;background-image: url('{% static "images\login4.png" %}')";"class="col-md-7">
+<div class="container">
+
+  <div class="col-md-5">
+
+      <form method="post" action="">
+          {%csrf_token%}
+          {{form.as_p}}
+
+          <!--<div class="form-group col-md-18">
+              <label for="inputusername">Username</label>
+              <div class="col-sm-10">
+                  <input type="username" class="form-control" id="inputusername" placeholder="Username">
+              </div>
+          </div>
+          <div class="form-group col-md-18">
+              <label for="inputEmail3">Email</label>
+              <div class="col-sm-10">
+                  <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+              </div>
+          </div>
+
+          <div class="form-group col-md-18">
+              <label for="inputfirstname">Firstname</label>
+              <div class="col-sm-10">
+                  <input type="firstname" class="form-control" id="inputfirstname" placeholder="Firstname">
+              </div>
+          </div>
+          <div class="form-group col-md-18">
+              <label for="inputlastname">Lastname</label>
+              <div class="col-sm-10">
+                  <input type="lastname" class="form-control" id="inputlastname" placeholder="Lastname">
+              </div>
+          </div>
+
+          <div class="form-group col-md-18">
+              <label for="inputPassword">Password</label>
+              <div class="col-sm-10">
+                  <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+              </div>
+          </div>
+          <div class="form-group col-md-18">
+              <label for="inputPassword">ConformPassword</label>
+              <div class="col-sm-10">
+                  <input type="password" class="form-control" id="inputPassword3" placeholder="ConformPassword">
+              </div>
+          </div>-->
+          <button class="btn btn-outline-info" type="submit" style="background-color:#F4EB16; color:blue">Register
+          </button>
+          <p> Already a member? <a href="{% url 'login1' %}">click to login</a></p>
+      </form>
+  </div>
+</div>
+
+
+</body>
+</html>

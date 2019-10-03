@@ -1,0 +1,66 @@
+{% load staticfiles %}
+{% load static %}
+<html>
+<head>
+	<title>Add Truck</title>
+	<link rel="stylesheet" href="{%static 'css/addtruck.css' %}">
+</head>
+<body>
+<div class="header">
+		<div class="container">
+
+			<div class="logo">
+				<p>Add Truck</p>
+			</div>
+
+			<nav>
+				<ul>
+					<li><a href="{% url 'Transporterhome' %}">Home</a></li>
+					<li><a href="{% url 'Add' %}">Add</a></li>
+					<li><a href="{% url 'View' %}">View</a></li>
+                    <li><a href="{% url 'base' %}">Logout</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div class="box">
+		<h2>Add Truck</h2>
+		<form action="" method="">
+			<div class="inputBox">
+				<input type="text" name="" required="">
+				<label>Model Name</label>
+			</div>
+
+			<div class="inputBox">
+				<input type="text" name="" required="">
+				<label>Capacity</label>
+			</div>
+
+			<div class="inputBox">
+				<input type="text" name="" required="">
+				<label>No. plate</label>
+			</div>
+
+			<div class="inputBox">
+				<input type="text" name="" required="">
+				<label>Chassis No.</label>
+			</div>
+		</form>
+		<div class="container">
+			<div class="imgbox">
+				<img src="" name="vehicalimg">
+			</div>
+		</div>
+
+		<div class="Button">
+			<input type="file" name="">
+		</div>
+		<div class="upload">
+			<input type="submit" name="" value="Upload Image">
+		</div>
+		<input type="submit" name="" value="Add Truck">
+	</div>
+</body>
+</html>
+</body>
+</html>

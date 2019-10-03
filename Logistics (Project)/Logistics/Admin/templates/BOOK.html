@@ -1,0 +1,58 @@
+{% load static %}
+<html>
+<head>
+	<title></title>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/bookstyle.css' %}">
+	<script>
+     function myFunction() {
+     var x = document.getElementById("myDate").value;
+     document.getElementById("demo").innerHTML = x;
+}
+</script>
+</head>
+<body>
+	<form method="post" action="{% url 'BOOK' %}" >
+		<div class="container">
+        <div class="box">
+<!--		<div class="container">-->
+<!--			<div class="box">-->
+				<h2>Booking Form</h2>
+				<div class="inputbox">
+				{%csrf_token%}
+					{{form.as_p}}
+
+<!--					<input type="text" class="input" name="first_name" placeholder="firstname">-->
+<!--					<input type="text" class="input" name="Last_name" placeholder="Lastname">-->
+<!--					<input type="email" class="input" name="Email" placeholder="Email">-->
+<!--					<input type="text" class="input" name="Contact" placeholder="Contact">-->
+<!--					<input type="text" class="input" name="No_of_Boxes" placeholder="No_of_Boxes">-->
+<!--					<input type="text" class="input" name="Capacity" placeholder="Capacity">-->
+<!--				&lt;!&ndash;<div>-->
+<!--				<input type="date" class ="input" id="myDate" value="2014-02-09">-->
+<!--				</div>&ndash;&gt;-->
+<!--				<div>-->
+				<input type="submit" id="signup" value="BOOK">
+<!--			    </div>-->
+<!--		</div>-->
+<!--			</div>-->
+<!--		</div>-->
+		</div>
+ 	 </div>
+	</form>
+</body>
+</html>
+
+
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>BOOK</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<form method="POST" class="post-form" enctype="multipart/form-data">-->
+<!--        {% csrf_token %}-->
+<!--        {{ form.as_p }}-->
+<!--        <button type="submit" class="save btn btn-default">Save</button>-->
+<!--</form>-->
+<!--</body>-->
+<!--</html>-->
